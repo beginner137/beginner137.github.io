@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Beginner137</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+
+    
+    
+    
+    <link rel="stylesheet" href="../../css/theme.min.css">
+
+    
+    
+    
+
+    
+</head>
+<body>
+        <div id="content" class="mx-auto"><header class="container mt-sm-5 mt-4 mb-4 mt-xs-1">
+    <div class="row">
+        
+        <div class="col-sm-4 col-12 text-sm-right text-center pt-sm-4">
+            <a href="../../" class="text-decoration-none">
+                <img id="home-image" class="rounded-circle"
+                    
+                        
+                            src="../../images/avatar.jpg"
+                        
+                    
+                />
+            </a>
+        </div>
+        <div class="col-sm-8 col-12 text-sm-left text-center">
+        
+            <h2 class="m-0 mb-2 mt-4">
+                <a href="../../" class="text-decoration-none">
+                    
+                        Doris Xiang
+                    
+                </a>
+            </h2>
+            <p class="text-muted mb-1">
+                
+                    Builder | Learner based in Seattle
+                
+            </p>
+            <ul id="nav-links" class="list-inline mb-2">
+                
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../about/" title="About">About</a>
+                    </li>
+                
+                    <li class="list-inline-item">
+                        <a class="badge badge-white " href="../../posts/" title="Posts">Posts</a>
+                    </li>
+                
+            </ul>
+            <ul id="nav-social" class="list-inline">
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="http://github.com/beginner137" target="_blank">
+                            <i class="fab fa-github fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+                    <li class="list-inline-item mr-3">
+                        <a href="https://x.com/dorisxiang_" target="_blank">
+                            <i class="fab fa-x fa-1x text-muted"></i>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+    <hr />
+</header>
+<div class="container">
+    <div class="pl-sm-4 ml-sm-5">
+        <p>Everyone quotes token counts, but what are we counting? In this post, I&rsquo;ll try to explain it from first principles that can be drawn on a napkin.</p>
+<p>Computers don&rsquo;t have eyes or brains. When they &ldquo;read,&rdquo; they aren&rsquo;t seeing words or ideas; they are processing lists of integers.</p>
+<p>The challenge in Natural Language Processing is crossing that gap: How do we turn the messy reality of human language into a clean list of numbers?</p>
+<p>Before we get to the modern solution (Byte Pair Encoding), it helps to look at the two naive approaches to see why they fail.</p>
+<h2 id="the-context-how-big-should-a-token-be">The Context: How Big Should a &ldquo;Token&rdquo; Be?</h2>
+<p>If we want to teach a computer the word &ldquo;Apple&rdquo;, we have two extremes:</p>
+<ol>
+<li>
+<p><strong>Character-level</strong> We could turn every single letter into a number (A=1, B=2,&hellip;).</p>
+<ul>
+<li><em>The Good:</em> We only need a tiny vocabulary for languages like English.</li>
+<li><em>The Bad:</em> It&rsquo;s incredibly inefficient. The model has to process 5 separate tokens just to grasp the single concept of &ldquo;Apple.&rdquo; It’s like reading a book one letter at a time. <strong>Too slow.</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Word-level</strong> We could assign a unique number to every single word in the English language.</p>
+<ul>
+<li><em>The Good:</em> It&rsquo;s fast. &ldquo;Apple&rdquo; is just one number.</li>
+<li><em>The Bad:</em> Language is infinite. What happens when the model sees a new word like &ldquo;iPhone17&rdquo; or a typo? If it&rsquo;s not in the dictionary, the model breaks or sees an <code>&lt;Unknown&gt;</code> token. <strong>Too rigid.</strong></li>
+</ul>
+</li>
+</ol>
+
+    </div>
+
+    
+
+            </div>
+        </div><footer class="text-center pb-1">
+    <small class="text-muted">
+        
+        &copy; Copyright 2025, beginner137
+        
+        <br>
+    </small>
+</footer></body>
+</html>
